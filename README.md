@@ -1,6 +1,5 @@
 # Pre-work - *Blog*
-
-
+**https://hidden-crag-51570.herokuapp.com/** is a Ruby on Rails blog application.
 * [ x] User can create a new post, formatted using the Markdown language.
 * [ x] User can edit an existing post.
 * [ x] There is one post that introduces the App Creator with name, picture.
