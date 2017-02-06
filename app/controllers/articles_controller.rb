@@ -4,8 +4,15 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    search = params[:term].present? ? params[:term] : nil
+    @articles = if search
+                  # Article.where('title LIKE ?', '$%{search}%$', '$%{search}%$')
+                  Article.search(search)
+                else
+                  Article.all
+                end
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+
   end
 
   # GET /articles/1
